@@ -3,7 +3,7 @@ import './sideBar.scss';
 
 export default function SideBar({setMenuOpen}) {
     return (
-        <ul onClick={()=>setMenuOpen(false)}>
+        <ul className='sidebar-ul'onClick={()=>setMenuOpen(false)}>
           <li>
             <a href="#intro">Home</a>
           </li>

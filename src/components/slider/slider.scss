@@ -1,0 +1,28 @@
+@import '../../global.scss';
+
+.slider-container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-y: hidden;
+
+    .slide-image{
+        width: 500px;
+        height: 270px;
+    }
+     
+
+    .slide{
+        opacity: 0;
+        transition-duration: 1s ease;
+    }
+
+    .slide-active{
+        opacity: 1;
+        transition-duration:1s ;
+        transform: scale(1.08);
+    }
+
+}

@@ -11,7 +11,7 @@ export default function Intro() {
         strings: ["Developer"],
         typeSpeed: 100,
         backSpeed: 80,
-        backDelay: 1500,
+        backDelay: 2000,
       });
     }, []);
 
