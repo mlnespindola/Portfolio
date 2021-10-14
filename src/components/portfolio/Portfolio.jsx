@@ -2,11 +2,20 @@ import "./portfolio.scss";
 import Slider from "../slider/Slider";
 import { Sliderdata } from "../slider/Sliderdata";
 import { useState } from "react";
-import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+import {
+  ArrowBackIosRounded,
+  ArrowForwardIosRounded,
+} from "@material-ui/icons";
+import ProjectsDescription from "./ProjectsDescription";
+import PortfolioItem from "./PortfolioItem";
 
 export default function Portfolio() {
   const [current, setCurrent] = useState(0);
   const length = Sliderdata.length;
+
+  const itemClicked = (index) => {
+    setCurrent(index);
+  };
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -22,15 +31,23 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
-      <ul>
-        {Sliderdata.map((sliderdata, index) => (
-          <li className={ current === index && 'active'} key={sliderdata.id}>{sliderdata.name}</li>
-        ))}
-      </ul>
-      <ArrowBackIos className="slide-back" onClick={prevSlide} />
-      <ArrowForwardIos className="slide-forward" onClick={nextSlide} />
-      <Slider current={current}></Slider>
+      <div className="portfolioContainer">
+        <div className="leftContainer">
+          <Slider current={current}></Slider>
+
+          <ArrowBackIosRounded className="slide-back" onClick={prevSlide} />
+
+          <ArrowForwardIosRounded
+            className="slide-forward"
+            onClick={nextSlide}
+          />
+        </div>
+        <div className="rightContainer">
+          <h1>Projetos</h1>
+          <PortfolioItem current={current} itemClicked={itemClicked} />
+          <ProjectsDescription current={current} />
+        </div>
+      </div>
     </div>
   );
 }

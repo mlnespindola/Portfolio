@@ -2,8 +2,8 @@ import React from "react";
 import { Sliderdata } from "./Sliderdata";
 import "./slider.scss";
 
-export default function Slider({ current }) {
-  return (
+const Slider = ({ current }) => {
+  return(
     <div className="slider-container">
       {Sliderdata.map((slide, index) => {
         return (
@@ -16,7 +16,10 @@ export default function Slider({ current }) {
             )}
           </div>
         );
-      })}
+          
+      })};
     </div>
-  );
-}
+  )
+    
+};
+export default Slider;

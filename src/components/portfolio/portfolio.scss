@@ -5,58 +5,70 @@
     background-color: white;
     position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
-    h1{
-        font-size: 50px;
-        margin-top: 20px;
-
-    }
     
-    ul{
-        padding: 0;
-        list-style: none;
+    .portfolioContainer{
+        width: 95%;
+        height: 95%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 20px 0;        
 
-        li{
-            color: black;
-            font-size: 14px;
-            margin: 20px;
-            padding: 7px;
-            border-radius: 10px;
-            cursor: pointer;
+        .leftContainer{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex: 0.5;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
 
-
-            &.active{
-                background-color: $mainColor;
-                color: white;
+        
+            .slide-back{
+                position: absolute;
+                top: 50%;
+                left: 3%;   
+                font-size: 28px;
+                z-index: 1;                
+                cursor: pointer;
+                user-select: none;
             }
+        
+
+            .slide-forward{
+                position: absolute;
+                top: 50%;
+                left: 92%;
+                font-size: 28px;
+                z-index: 1;
+                cursor: pointer;
+                user-select: none;
+            }
+
             
+        
+
+        }    
+
+        .rightContainer{
+            display: flex;
+            flex: 0.5;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            flex-direction: column;
+
+            h1{
+             font-size: 50px;
+             margin-top: 0;
+
+            }
+
         }
-    }
 
-    .slide-back{
-        position: absolute;
-        top: 60%;
-        left: 24%;
-        font-size: 32px;
-        z-index: 1;
-        cursor: pointer;
-        user-select: none;
     }
-
-    .slide-forward{
-        position: absolute;
-        top: 60%;
-        right: 24%;
-        font-size: 32px;
-        z-index: 1;
-        cursor: pointer;
-        user-select: none;
-    }
-
+   
 }
