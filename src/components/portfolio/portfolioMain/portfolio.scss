@@ -1,4 +1,4 @@
-@import '../../global.scss';
+@import "../../../global.scss";
 
 
 .portfolio{
@@ -30,8 +30,8 @@
             .slide-back{
                 position: absolute;
                 top: 50%;
-                left: 3%;   
-                font-size: 28px;
+                left: 2%;   
+                font-size: 36px;
                 z-index: 1;                
                 cursor: pointer;
                 user-select: none;
@@ -42,7 +42,7 @@
                 position: absolute;
                 top: 50%;
                 left: 92%;
-                font-size: 28px;
+                font-size: 36px;
                 z-index: 1;
                 cursor: pointer;
                 user-select: none;
@@ -62,7 +62,7 @@
             flex-direction: column;
 
             h1{
-             font-size: 50px;
+             font-size: 30px;
              margin-top: 0;
 
             }

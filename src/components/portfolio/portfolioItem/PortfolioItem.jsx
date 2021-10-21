@@ -1,5 +1,5 @@
 import React from "react";
-import { Sliderdata } from "../slider/Sliderdata";
+import { Sliderdata } from "../../slider/Sliderdata";
 import "./portfolioItem.scss";
 
 function PortfolioItem(props) {

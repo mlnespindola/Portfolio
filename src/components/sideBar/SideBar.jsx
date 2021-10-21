@@ -11,12 +11,6 @@ export default function SideBar({setMenuOpen}) {
             <a href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#works">Experiência</a>
-          </li>
-          <li>
-            <a href="#testimonials">Feedback</a>
-          </li>
-          <li>
             <a href="#contact">Contato</a>
           </li>
         </ul>

@@ -1,13 +1,13 @@
 import "./portfolio.scss";
-import Slider from "../slider/Slider";
-import { Sliderdata } from "../slider/Sliderdata";
+import Slider from "../../slider/Slider";
+import { Sliderdata } from "../../slider/Sliderdata";
 import { useState } from "react";
 import {
   ArrowBackIosRounded,
   ArrowForwardIosRounded,
 } from "@material-ui/icons";
-import ProjectsDescription from "./ProjectsDescription";
-import PortfolioItem from "./PortfolioItem";
+import ProjectsDescription from "../projectsDescription/ProjectsDescription";
+import PortfolioItem from "../portfolioItem/PortfolioItem";
 
 export default function Portfolio() {
   const [current, setCurrent] = useState(0);
@@ -43,7 +43,7 @@ export default function Portfolio() {
           />
         </div>
         <div className="rightContainer">
-          <h1>Projetos</h1>
+          <h1>projetos.</h1>
           <PortfolioItem current={current} itemClicked={itemClicked} />
           <ProjectsDescription current={current} />
         </div>

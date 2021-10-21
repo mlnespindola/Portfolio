@@ -1,5 +1,5 @@
 import React from "react";
-import { Sliderdata } from "../slider/Sliderdata";
+import { Sliderdata } from "../../slider/Sliderdata";
 import "./projectsDescription.scss";
 
 export default function ProjectsDescription({ current }) {
